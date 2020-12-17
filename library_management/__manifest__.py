@@ -7,7 +7,8 @@
     'description': "Library management module",
     # data files always loaded at installation
     'data': [
-        # 'views/mymodule_view.xml',
+        'views/book_view.xml',
+        'security/ir.model.access.csv',
     ],
     # data files containing optionally loaded demonstration data
     'demo': [
