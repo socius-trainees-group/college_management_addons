@@ -7,9 +7,16 @@
     'description': "Student Management module",
     # data files always loaded at installation
     'data': [
+
         'security/ir.model.access.csv',
         'views/students.xml',
         'views/hallticket.xml',
+
+        'views/students.xml',
+        'views/staff_info.xml',
+        'security/ir.model.access.csv',
+
+
     ],
     # data files containing optionally loaded demonstration data
     'demo': [
