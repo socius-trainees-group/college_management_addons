@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_school_book,school.book,model_school_book,base.group_user,1,1,1,1
+access_book_registration,book.registration,model_book_registration,,1,1,1,1

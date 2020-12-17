@@ -8,6 +8,7 @@
     # data files always loaded at installation
     'data': [
         'views/book_view.xml',
+        'views/book_registration.xml',
         'security/ir.model.access.csv',
     ],
     # data files containing optionally loaded demonstration data
