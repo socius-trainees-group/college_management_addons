@@ -1,32 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <record id="hallticket_tree_view" model="ir.ui.view">
-    <field name="name">Hallticket</field>
-    <field name="model">student_management.table.hallticket</field>
-    <field name="arch" type="xml">
-        <tree>
-            <form>
-                <sheet>
-                    <group>
-                        <field name="name"/>
-                        <field name="register_number"/>
-                        <field name="branch"/>
-                        <field name="subject"/>
-                        <field name="subject_code"/>
-                    </group>
-                </sheet>
-            </form>
-        </tree>
-    </field>
-    </record>
-    <record id="hallticket_action" model="ir.actions.act_window">
-        <field name="name">student_management</field>
-        <field name="res_model">student_management.table.hallticket</field>
-        <field name="view_mode">tree,form</field>
-        <field name="help" type="html">
-            <p>hall ticket details here</p>
-        </field>
-    </record>
-    <menuitem id="hallticket_menu" name="Hallticket"/>
-    <menuitem id="hallticket_details" name="Details"/>
+    <data>
+        <record id="hallticket_form" model="ir.ui.view">
+            <field name="name">Hallticket</field>
+            <field name="model">student.hallticket</field>
+            <field name="arch" type="xml">
+                <form string="Hallticket">
+                    <sheet>
+
+                        <group>
+                            <field name="name"/>
+                            <field name="register_number"/>
+                            <field name="branch"/>
+                            <field name="subject_code"/>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="hallticket_tree_view" model="ir.ui.view">
+            <field name="name">Hallticket</field>
+            <field name="model">student.hallticket</field>
+            <field name="arch" type="xml">
+                <tree string="Hallticket">
+                    <field name="name"/>
+                    <field name="register_number"/>
+                    <field name="branch"/>
+                    <field name="subject"/>
+                    <field name="subject_code"/>
+                </tree>
+            </field>
+        </record>
+        <record id="hallticket_action" model="ir.actions.act_window">
+            <field name="name">student_management</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">student.hallticket</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p>hall ticket details here</p>
+            </field>
+        </record>
+        <menuitem id="hallticket_menu"
+                  name="Hallticket"
+                  action="hallticket_action"
+                  sequence="3"/>
+    </data>
 </odoo>

@@ -1,5 +1,5 @@
 {
-    'name': "Student Manageemnt",
+    'name': "Student Management",
     'version': '13.1.0',
     'depends': ['base'],
     'author': "Socius Trainee",
@@ -7,7 +7,9 @@
     'description': "Student Management module",
     # data files always loaded at installation
     'data': [
-        # 'views/mymodule_view.xml',
+        'security/ir.model.access.csv',
+        'views/students.xml',
+        'views/hallticket.xml',
     ],
     # data files containing optionally loaded demonstration data
     'demo': [
