@@ -7,7 +7,7 @@
       <field name="arch" type="xml">
         <tree>
           <field name="sname" string="Student Name"/>
-          <field name="name" string="Book Name"/>
+          <field name="name" string="Title"/>
           <field name="code"  string="Code" />
           <field name="email" string="Email"/>
           <field name="phone" string="Phone"/>
