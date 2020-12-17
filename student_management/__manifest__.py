@@ -8,7 +8,7 @@
     # data files always loaded at installation
     'data': [
         'views/students.xml',
-        'views/staff_info.xml'
+        'views/staff_info.xml',
         'security/ir.model.access.csv',
 
     ],
