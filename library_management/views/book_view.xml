@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
   <data>
 
     <record model="ir.ui.view" id="book_list">
       <field name="name">Book list</field>
-      <field name="model">school.book</field>
+      <field name="model">book.return</field>
       <field name="arch" type="xml">
         <tree>
           <field name="sname" string="Student Name"/>
@@ -22,7 +23,7 @@
 
     <record model="ir.ui.view" id="book_form">
       <field name="name">book form</field>
-      <field name="model">school.book</field>
+      <field name="model">book.return</field>
       <field name="arch" type="xml">
         <form>
           <group>
@@ -48,11 +49,12 @@
 
     <record model="ir.actions.act_window" id="book_list_action">
       <field name="name">Book List</field>
-      <field name="res_model">school.book</field>
+      <field name="res_model">book.return</field>
       <field name="view_mode">tree,form</field>
     </record>
 
     <menuitem name="Book" id="menu_booklist" action="book_list_action"/>
+
 
   </data>
 </odoo>
