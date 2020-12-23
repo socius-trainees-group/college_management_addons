@@ -4,4 +4,6 @@ __init__.py
 /library_management/reports/
 /student_management/reports/
 *.csv
+*__pycache__/
+
 
