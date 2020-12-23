@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <data>
+        <record id="book_shelf_form_view" model="ir.ui.view">
+            <field name="name">Book Shelf</field>
+            <field name="model">book.shelf</field>
+            <field name="arch" type="xml">
+                <form string="Book Shelf">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="book_ids"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- explicit list view definition -->
+
+        <record model="ir.ui.view" id="book_shelf_tree_view">
+            <field name="name">Book Shelf</field>
+            <field name="model">book.shelf</field>
+            <field name="arch" type="xml">
+                <tree string="Book Shelf">
+                    <field name="name"/>
+                    <field name="book_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_book_shelf">
+            <field name="name">Book Shelf</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">book.shelf</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="bus_shelf_menu"
+                  name="Book Shelf" action="action_book_shelf"
+                  parent="book_registration_menu"
+        />
+    </data>
+</odoo>
