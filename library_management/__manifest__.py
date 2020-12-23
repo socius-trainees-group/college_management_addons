@@ -1,7 +1,8 @@
+
 {
     'name': "Library Management",
     'version': '13.1',
-    'depends': ['base'],
+    'depends': ['base',],
     'author': "Socius Trainee",
     # 'category': 'Category',
     # 'description': "Library management module",
