@@ -19,31 +19,28 @@
 
 
     <record id="staff_tree_view" model="ir.ui.view">
-        <field name="name">Staff Details</field>
+        <field name="name">StaffDetails</field>
         <field name="model">staff.table.staff</field>
         <field name="arch" type="xml">
                 <tree>
-
                     <field name="name" />
                     <field name="gender" />
                     <field name="address" />
                     <field name="phone" />
-
-
                 </tree>
         </field>
     </record>
 
     <record id="staff_action" model="ir.actions.act_window">
 
-        <field name="name">StaffDetaills</field>
+        <field name="name">StaffDetails</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">staff.table.staff</field>
-        <field name="view_mode">form,tree</field>
+        <field name="view_mode">tree,form</field>
         <field name="help" type="html">
             <p> Staff Details...</p>
         </field>
     </record>
-    <menuitem name="staff" id="staff_item_menu"/>
-    <menuitem name="Details" id="menu_item_details" parent="staff_item_menu" action="staff_action"/>
+
+    <menuitem name="staff details" id="menu_item_details" action="staff_action"/>
 </odoo>
