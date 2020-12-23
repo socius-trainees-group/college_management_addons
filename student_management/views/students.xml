@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-        <!-- form view of players model-->
+        <!-- form view of students model-->
     <record id="students_form" model="ir.ui.view">
 
         <field  name="name">Students</field>
@@ -8,16 +8,33 @@
         <field  name="arch" type="xml">
             <form>
                 <sheet>
+                    <h1>
+                            <field name="name" default_focus="1" placeholder="Name" attrs="{'required' :True }"/>
+                    </h1>
+                    <field name="image_of_student" widget="image" class="oe_avatar" />
+                    <field name="gender" widget="radio" options="{'horizontal': true}"/>
                     <group>
                         <group>
 
-                                <field name="name"/>
-                                <field name="age" />
-                                <field name="department" />
-                                <field name="semester"/>
-                                <field name="date_of_birth"/>
-                                <field name="contact_no"/>
-                                <field name="address"/>
+                            <field name="date_of_birth"/>
+                            <field name="age"  force_save="1"/>
+
+                            <field name="street" placeholder="Street..."  />
+                            <field name="street2" placeholder="Street 2..."  />
+                            <field name="city" placeholder="City" />
+                            <field name="state_id" class="o_address_state" placeholder="State" />
+                            <field name="zip" placeholder="ZIP"  />
+                            <field name="country_id" placeholder="Country" />
+
+
+                        </group>
+
+                        <group>
+
+                            <field name="mail_id"/>
+                            <field name="department" />
+                            <field name="semester"/>
+                            <field name="contact_no"/>
 
                         </group>
                     </group>
@@ -28,7 +45,7 @@
 
     </record>
 
-    <!-- Tree view of players model-->
+    <!-- Tree view of students model-->
     <record id="students_tree" model="ir.ui.view">
 
         <field  name="name">Students</field>

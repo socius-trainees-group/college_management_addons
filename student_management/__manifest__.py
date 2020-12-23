@@ -10,6 +10,8 @@
         'views/students.xml',
         'views/staff_info.xml',
         'security/ir.model.access.csv',
+        'reports/report.xml',
+        'reports/student_report.xml'
 
     ],
     # data files containing optionally loaded demonstration data
