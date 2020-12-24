@@ -1,7 +1,7 @@
 {
     'name': "Student Management",
     'version': '13.1.0',
-    'depends': ['base'],
+    'depends': ['website'],
     'author': "Socius Trainee",
     'category': 'Category',
     'description': "Student Management module",
@@ -16,7 +16,9 @@
         'views/staff_info.xml',
         'security/ir.model.access.csv',
         'reports/report.xml',
-        'reports/student_report.xml'
+        'reports/student_report.xml',
+
+        'views/front_end/webpages/first_page.xml'
 
 
     ],

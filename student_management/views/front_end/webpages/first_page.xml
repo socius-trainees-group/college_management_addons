@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="first_page" name="First Page">
+        <t t-call="website.layout">
+            <div class="oe_structure">
+                <h2 style="text-align: center;padding: 40px; margin: 20px; height: auto;">First Web Page in Odoo 13</h2>
+            </div>
+        </t>
+    </template>
+</odoo>

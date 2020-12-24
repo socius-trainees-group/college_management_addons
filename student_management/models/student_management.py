@@ -31,7 +31,6 @@ class Students(models.Model):
         for record in self:
             if record.date_of_birth:
                 record.age = f"{int((date.today()-record.date_of_birth).days/365.2425)} years old"
-                print(record.age)
 
     @api.constrains('age')
     def check_age(self):
