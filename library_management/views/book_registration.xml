@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="books_tree_view">
+            <field name="name">book.registration.tree</field>
+            <field name="model">book.registration</field>
+            <field name="arch" type="xml">
+                <tree string="Books">
+                    <field name="name"/>
+                    <field name="number"/>
+                    <field name="author_id"/>
+                    <field name="category_id"/>
+                    <field name="shelf_id"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="book_form_view">
+            <field name="name">book.registration.form</field>
+            <field name="model">book.registration</field>
+            <field name="arch" type="xml">
+                <form string="Book Registration">
+                    <sheet>
+                        <h1 class="oe_title">
+                            <field name="name"/>
+                        </h1>
+                        <field name="image" class="oe_avatar" widget="image"/>
+                        <group>
+                            <group>
+                                <field name="number"/>
+                                <field name="author_id"/>
+                                <field name="shelf_id"/>
+
+                            </group>
+                            <group>
+                                <field name="registration_date"/>
+                                <field name="category_id"/>
+                                <field name="published_year"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_book_registration">
+            <field name="name">Books</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">book.registration</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_noncontent_smiling_face">
+                    Register your Books here!!
+                </p>
+            </field>
+        </record>
+        <menuitem id="book_registration_menu"
+                  name="Book Registration"
+                  web_icon="library_management,static/description/book.png"
+                  action="action_book_registration"
+                  sequence="3"/>
+
+    </data>
+</odoo>
